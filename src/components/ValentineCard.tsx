@@ -62,33 +62,15 @@ const ValentineCard = ({ name, onYesClick }: ValentineCardProps) => {
   return (
     <div
       ref={cardRef}
-      className="relative z-10 flex flex-col items-center justify-center px-4"
+      className="relative z-10 flex flex-col items-center justify-center px-4 w-full"
     >
-      {/* Main Card */}
-      <div className="bg-card/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl border border-primary/20 max-w-lg w-full text-center animate-scale-up">
-        {/* Decorative hearts */}
-        <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-4xl animate-bounce-soft">
-          💝
-        </div>
-
-        {/* Question */}
-        <h1 className="font-romantic text-4xl md:text-6xl text-gradient-romantic mb-4 leading-tight">
-          {name},
-        </h1>
-        <h2 className="font-romantic text-3xl md:text-5xl text-gradient-romantic mb-8">
-          Will you be my Valentine?
-        </h2>
-
-        {/* Heart decoration */}
-        <div className="text-6xl mb-8 animate-pulse-glow inline-block">
-          💕
-        </div>
-
-        {/* Buttons */}
+      {/* Main Card - More transparent and compact */}
+      <div className="bg-transparent backdrop-blur-none rounded-3xl p-4 md:p-6 max-w-lg w-full text-center animate-scale-up">
+        {/* Buttons - More prominent */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button
             onClick={onYesClick}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-body font-semibold text-xl px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-pulse-glow"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-body font-semibold text-xl md:text-2xl px-12 py-7 rounded-full shadow-2xl hover:shadow-xl transition-all duration-300 hover:scale-110 animate-pulse-glow w-full sm:w-auto"
           >
             Yes! 💖
           </Button>
@@ -99,7 +81,7 @@ const ValentineCard = ({ name, onYesClick }: ValentineCardProps) => {
               onMouseEnter={moveButton}
               onTouchStart={moveButton}
               onClick={moveButton}
-              className="border-2 border-muted-foreground/30 text-muted-foreground font-body font-medium text-lg px-8 py-5 rounded-full hover:border-primary/50 transition-all duration-300"
+              className="border-2 border-white/50 bg-white/20 text-white font-body font-medium text-lg md:text-xl px-10 py-6 rounded-full hover:border-primary/50 transition-all duration-300 w-full sm:w-auto"
             >
               No 😢
             </Button>
