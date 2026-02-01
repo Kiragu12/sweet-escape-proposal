@@ -1,12 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import FloatingHearts from "@/components/FloatingHearts";
+import ValentineCard from "@/components/ValentineCard";
+import CelebrationPage from "@/components/CelebrationPage";
 
 const Index = () => {
+  const [showCelebration, setShowCelebration] = useState(false);
+  
+  // Customize the name here
+  const valentineName = "Sarah";
+
+  const handleYesClick = () => {
+    setShowCelebration(true);
+  };
+
+  if (showCelebration) {
+    return <CelebrationPage name={valentineName} />;
+  }
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-romantic-gradient flex items-center justify-center relative overflow-hidden">
+      <FloatingHearts />
+      <ValentineCard name={valentineName} onYesClick={handleYesClick} />
     </div>
   );
 };
