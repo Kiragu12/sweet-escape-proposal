@@ -19,7 +19,7 @@ const FloatingHearts = () => {
         newHearts.push({
           id: i,
           left: Math.random() * 100,
-          size: Math.random() * 20 + 15,
+          size: Math.random() * 40 + 40,
           duration: Math.random() * 8 + 8,
           delay: Math.random() * 10,
           opacity: Math.random() * 0.5 + 0.3,

@@ -70,7 +70,7 @@ const ValentineCard = ({ name, onYesClick }: ValentineCardProps) => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button
             onClick={onYesClick}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-body font-semibold text-xl md:text-2xl px-12 py-7 rounded-full shadow-2xl hover:shadow-xl transition-all duration-300 hover:scale-110 animate-pulse-glow w-full sm:w-auto"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground font-body font-semibold text-2xl md:text-3xl px-16 py-8 rounded-full shadow-2xl hover:shadow-xl transition-all duration-300 hover:scale-110 animate-pulse-glow w-full sm:w-auto"
           >
             Yes! 💖
           </Button>
@@ -81,7 +81,7 @@ const ValentineCard = ({ name, onYesClick }: ValentineCardProps) => {
               onMouseEnter={moveButton}
               onTouchStart={moveButton}
               onClick={moveButton}
-              className="border-2 border-white/50 bg-white/20 text-white font-body font-medium text-lg md:text-xl px-10 py-6 rounded-full hover:border-primary/50 transition-all duration-300 w-full sm:w-auto"
+              className="border-2 border-white/50 bg-white/20 text-white font-body font-medium text-xl md:text-2xl px-14 py-7 rounded-full hover:border-primary/50 transition-all duration-300 w-full sm:w-auto"
             >
               No 😢
             </Button>
@@ -90,7 +90,7 @@ const ValentineCard = ({ name, onYesClick }: ValentineCardProps) => {
 
         {/* Escape message */}
         {escapeCount > 0 && (
-          <p className="mt-6 text-muted-foreground font-body text-sm animate-wiggle">
+          <p className="mt-6 text-muted-foreground font-body text-lg md:text-xl animate-wiggle">
             {escapeMessages[escapeCount % escapeMessages.length]}
           </p>
         )}
@@ -103,7 +103,7 @@ const ValentineCard = ({ name, onYesClick }: ValentineCardProps) => {
           onMouseEnter={moveButton}
           onTouchStart={moveButton}
           onClick={moveButton}
-          className="fixed border-2 border-muted-foreground/30 text-muted-foreground font-body font-medium text-lg px-8 py-5 rounded-full hover:border-primary/50 transition-all duration-200 z-50 shadow-lg"
+          className="fixed border-2 border-muted-foreground/30 text-muted-foreground font-body font-medium text-xl px-12 py-6 rounded-full hover:border-primary/50 transition-all duration-200 z-50 shadow-lg"
           style={{
             left: `${noButtonPosition.x}px`,
             top: `${noButtonPosition.y}px`,

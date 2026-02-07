@@ -71,7 +71,7 @@ export default {
         },
       },
       fontFamily: {
-        romantic: ["Dancing Script", "cursive"],
+        romantic: ["Sacramento", "cursive"],
         body: ["Quicksand", "sans-serif"],
       },
       borderRadius: {
